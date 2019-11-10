@@ -1,16 +1,6 @@
-int a=3;
+1 2 3
+50 , 213adv5s ,
 int b=5;
-b=a+b;asdsad
-bfbdf
-sv
-dsb
-
-fb
-fsbf
-
-3125.123
-for(int i =0  ; i++ i<2 ) {
-    int a=0;
-    itn b= 0;
-
-}
+abc , cde , fgh
+; int
+abcd

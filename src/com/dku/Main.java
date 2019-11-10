@@ -7,7 +7,7 @@ public class Main {
         MyScanner myScanner = new MyScanner(path);
 
         myScanner.printInputFile();
-
-
+        myScanner.scan();
+        myScanner.printResultTable();
     }
 }

@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b4e7861-6b31-40aa-8829-477688ce5c8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dku/MyScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dku/resource/GeneralForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dku/resource/SpecialForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/dku/resource/OpTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/dku/resource/SymbolTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/MyScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/MyScanner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/resource/GeneralForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/resource/SpecialForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dku/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dku/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/MyScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dku/resource/GeneralForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dku/resource/SpecialForm.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +43,12 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dku.resource" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hyoung\Desktop\3-2\오토마타\LexicalAnalyzer\src" />
       <recent name="C:\Users\Hyoung\Desktop\3-2\오토마타\LexicalAnalyzer\src\com\dku" />
@@ -84,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573387884266</updated>
-      <workItem from="1573387889756" duration="4240000" />
+      <workItem from="1573387889756" duration="32030000" />
     </task>
     <servers />
   </component>
