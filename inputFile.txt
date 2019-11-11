@@ -1,6 +1,9 @@
-1 2 3
-50 , 213adv5s ,
-int b=5;
-abc , cde , fgh
-; int
-abcd
+int main ( ) {
+    int num;
+    num = 32;
+
+    for( int i = 0 ; i < num ; i=i+1) {
+        int Alpha=3;
+        num= i +AL
+    }
+}

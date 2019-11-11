@@ -11,6 +11,8 @@ public class OpTable {
 
     public OpTable() {
 
+        operator.put(4, ">"); operator.put(5, "<"); // 토큰 번호를 몰라 임의로 지정
+
         operator.put(6, "+"); operator.put(7, "-");
         operator.put(8, "*"); operator.put(9, "/");
         operator.put(10, "=");

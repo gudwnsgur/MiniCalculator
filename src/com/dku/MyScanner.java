@@ -33,7 +33,6 @@ public class MyScanner {
     public void scan() {
         tokenizeAllCode(); // inputFile 을 tokenize
         addToSymbolTable(); // 모든 token 검사 후 symbol table 에 symbol 추가
-        printTokenized();
     }
 
     public void tokenizeAllCode() {
@@ -80,20 +79,20 @@ public class MyScanner {
         realToken.removeAll(Collections.singleton(""));
     }
 
-    // 구분된 token 중 SymbolTable 에 들어가야 할 token 추가
-    public void addToSymbolTable()
-    {
-        int idIndex = 0;
-        for (String token : realToken)
-        {
-            if (token.charAt(0) >= 'A' && token.charAt(0) <= 'z') {
-                boolean isKeyword = false;
-                for (String keyword : opTable.keyword.values()) {
-                    if (token.matches(keyword)) {
-                        isKeyword = true;
-                    }
-                }
-                if (!isKeyword) {
+                    // 구분된 token 중 SymbolTable 에 들어가야 할 token 추가
+                    public void addToSymbolTable()
+                    {
+                        int idIndex = 0;
+                        for (String token : realToken)
+                        {
+                            if (token.charAt(0) >= 'A' && token.charAt(0) <= 'z') {
+                                boolean isKeyword = false;
+                                for (String keyword : opTable.keyword.values()) {
+                                    if (token.matches(keyword)) {
+                                        isKeyword = true;
+                                    }
+                                }
+                                if (!isKeyword) {
                     symbolTable.putId(++idIndex, token);
                 }
             }   // 첫 문자가 알파벳일 때 id 인지 확인 후 추가
@@ -108,7 +107,6 @@ public class MyScanner {
 
             }   // 첫 문자가 상수일 때 constant 인지 확인 후 추가
         }
-
     }
     public void printTokenized() {
         System.out.println("구분된 모든 token");
