@@ -46,14 +46,12 @@ public class MyScanner {
         divisionList.add(" ");
         // 식별자, 구별자, " " 가 존재하는 List 생성
 
-        for (String input : inputFile)
-        {
+        for (String input : inputFile) {
             int index = 0;
             String[] arrayWord = input.split("");
 
             int i;
-            for (i = 0; i < arrayWord.length; i++)
-            {
+            for (i = 0; i < arrayWord.length; i++) {
 
                 for (String separator : divisionList) {
                     if (arrayWord[i].equals(separator)) {
@@ -79,21 +77,25 @@ public class MyScanner {
         realToken.removeAll(Collections.singleton(""));
     }
 
-                    // 구분된 token 중 SymbolTable 에 들어가야 할 token 추가
-                    public void addToSymbolTable()
-                    {
-                        int idIndex = 0;
-                        for (String token : realToken)
-                        {
-                            if (token.charAt(0) >= 'A' && token.charAt(0) <= 'z') {
-                                boolean isKeyword = false;
-                                for (String keyword : opTable.keyword.values()) {
-                                    if (token.matches(keyword)) {
-                                        isKeyword = true;
-                                    }
-                                }
-                                if (!isKeyword) {
-                    symbolTable.putId(++idIndex, token);
+    // 구분된 token 중 SymbolTable 에 들어가야 할 token 추가
+    public void addToSymbolTable() {
+        int idIndex = 0;
+        for (String token : realToken) {
+            if (token.charAt(0) >= 'A' && token.charAt(0) <= 'z') {
+                boolean isKeyword = false;
+                for (String keyword : opTable.keyword.values()) {
+                    if (token.matches(keyword)) {
+                        isKeyword = true;
+                    }
+                }
+                if (!isKeyword) {
+                    boolean isInIdTable = false;
+                    for(String id : symbolTable.id.values()) {
+                        if( token.equals(id) )
+                            isInIdTable = true;
+                    }
+                    if(!isInIdTable)
+                        symbolTable.putId(++idIndex, token);
                 }
             }   // 첫 문자가 알파벳일 때 id 인지 확인 후 추가
 
@@ -108,10 +110,11 @@ public class MyScanner {
             }   // 첫 문자가 상수일 때 constant 인지 확인 후 추가
         }
     }
+
     public void printTokenized() {
         System.out.println("구분된 모든 token");
-        for(String token : realToken) {
-            System.out.print(token+ "|");
+        for (String token : realToken) {
+            System.out.print(token + "|");
         }
         System.out.println();
     }
@@ -121,6 +124,7 @@ public class MyScanner {
             System.out.println(input);
         }
     }
+
     public void printResultTable() {
         opTable.printTable();
         symbolTable.printTable();

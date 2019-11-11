@@ -4,9 +4,7 @@
     <list default="true" id="3b4e7861-6b31-40aa-8829-477688ce5c8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inputFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dku/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dku/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/MyScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dku/resource/OpTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/resource/OpTable.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1573387884266</updated>
       <workItem from="1573387889756" duration="32075000" />
-      <workItem from="1573454296202" duration="1551000" />
+      <workItem from="1573454296202" duration="3097000" />
     </task>
     <servers />
   </component>
