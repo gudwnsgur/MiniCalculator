@@ -1,1 +1,1 @@
-간단한 Scnner & Parser 만들기
+간단한 Scnner & Parser
