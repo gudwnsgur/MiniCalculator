@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b4e7861-6b31-40aa-8829-477688ce5c8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/dku/MyParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/dku/resource/Token.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inputFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/MyScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/MyScanner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/resource/OpTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/resource/OpTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/resource/SymbolTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexicalAnalyzer/com/dku/resource/SymbolTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dku/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dku/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/MyScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dku/resource/OpTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/resource/OpTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dku/resource/SymbolTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dku/resource/SymbolTable.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,6 +45,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -85,7 +96,16 @@
       <option name="presentableId" value="Default" />
       <updated>1573387884266</updated>
       <workItem from="1573387889756" duration="32075000" />
-      <workItem from="1573454296202" duration="3097000" />
+      <workItem from="1573454296202" duration="5156000" />
+      <workItem from="1574830158022" duration="2320000" />
+      <workItem from="1574917406799" duration="1351000" />
+      <workItem from="1574924314538" duration="4210000" />
+      <workItem from="1574941905039" duration="8679000" />
+      <workItem from="1574950690712" duration="13282000" />
+      <workItem from="1574965195637" duration="196000" />
+      <workItem from="1575000439057" duration="1794000" />
+      <workItem from="1575003574844" duration="7163000" />
+      <workItem from="1575026002323" duration="7334000" />
     </task>
     <servers />
   </component>

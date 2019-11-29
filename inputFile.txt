@@ -1,13 +1,5 @@
-int ( ) {
-    int num;
-    num = 32;
-    boolean isBool;
-    for( int i = 0 ; i < num ; i=i+1) {
-        int Alpha=3;
-        Alpha= Alpha/num;
-        num = num+i;
-    }
-    if( num > 5  )   isBool = true;
-    else    isBool = false;
-}
-
+a=10
+b=20
+c=(a+b)*5-( 30 -20)/ 5c
+?
+? 1+2 +a +b

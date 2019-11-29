@@ -7,19 +7,24 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
+
 public class MyScanner {
 
     final private static String onlyDigit = "^[0-9]*$";
-
-    OpTable opTable = new OpTable();
-    SymbolTable symbolTable = new SymbolTable();
+    boolean ERR ;
+    int idIndex = 0;
+    OpTable opTable;
+    SymbolTable symbolTable;
 
     List<String> inputFile = new ArrayList<>(); // 받은 코드를 \n 로 나눈 List
     List<String> realToken = new ArrayList<>(); // 모든 token 을 나눈 List
 
-    public MyScanner(String path) {
+    public MyScanner(OpTable opTable, SymbolTable symbolTable) {
+        this.opTable = opTable;
+        this.symbolTable = symbolTable;
+    }   // 파일을 받아 inputFile List 에 줄 단위로 추가
 
-        try {
+/*        try {
             File file = new File(path);
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
@@ -27,13 +32,22 @@ public class MyScanner {
             }
         } catch (FileNotFoundException e) {
             System.out.println(e);
-        }
-    }   // 파일을 받아 inputFile List 에 줄 단위로 추가
+        }*/
 
-    public void scan() {
+    public List<String> scan(String line) {
+        ERR = false;
+        inputFile.add(line);
+
+        realToken.clear();
         tokenizeAllCode(); // inputFile 을 tokenize
-        addToSymbolTable(); // 모든 token 검사 후 symbol table 에 symbol 추가
+
+        inputFile.remove(line);
+        if(ERR) {
+            realToken.add("Error");
+        }
+        return realToken;
     }
+
 
     public void tokenizeAllCode() {
         String[] ops = opTable.operator.values().toArray(new String[0]);
@@ -76,27 +90,28 @@ public class MyScanner {
         realToken.removeAll(Collections.singleton(" "));
         realToken.removeAll(Collections.singleton(""));
     }
-
     // 구분된 token 중 SymbolTable 에 들어가야 할 token 추가
     public void addToSymbolTable() {
-        int idIndex = 0;
         for (String token : realToken) {
-            if (token.charAt(0) >= 'A' && token.charAt(0) <= 'z') {
-                boolean isKeyword = false;
-                for (String keyword : opTable.keyword.values()) {
-                    if (token.matches(keyword)) {
-                        isKeyword = true;
-                    }
+            boolean isKeyword = false;
+            for (String keyword : opTable.keyword.values()) {
+                if (token.matches(keyword)) {
+                    isKeyword = true;
                 }
-                if (!isKeyword) {
-                    boolean isInIdTable = false;
-                    for(String id : symbolTable.id.values()) {
-                        if( token.equals(id) )
-                            isInIdTable = true;
-                    }
-                    if(!isInIdTable)
-                        symbolTable.putId(++idIndex, token);
+            }
+
+            if (token.charAt(0) >= 'a' && token.charAt(0) <= 'z' && !isKeyword) {
+                if (token.length() != 1) ERR = true;    // a~z 인지 확인
+
+                boolean isInIdTable = false;
+                for (String id : symbolTable.id.keySet()) {
+                    if (token.equals(id))
+                        isInIdTable = true;     // 이미 존재하는 변수인지 확인
                 }
+
+                if (!isInIdTable && !ERR)
+                    symbolTable.putId(token, 0);
+
             }   // 첫 문자가 알파벳일 때 id 인지 확인 후 추가
 
             if (token.charAt(0) >= '0' && token.charAt(0) <= '9') {
@@ -104,30 +119,12 @@ public class MyScanner {
                     int num = Integer.parseInt(token);
                     symbolTable.putConstant(num);
                 } else {
-                    System.out.println(token + " : 옳은 token 이 아닙니다. ");
+                    ERR = true;
                 }
 
             }   // 첫 문자가 상수일 때 constant 인지 확인 후 추가
         }
     }
 
-    public void printTokenized() {
-        System.out.println("구분된 모든 token");
-        for (String token : realToken) {
-            System.out.print(token + "|");
-        }
-        System.out.println();
-    }
 
-    public void printInputFile() {
-        for (String input : inputFile) {
-            System.out.println(input);
-        }
-    }
-
-    public void printResultTable() {
-        opTable.printTable();
-        symbolTable.printTable();
-    }
 }
-
